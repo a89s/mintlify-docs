@@ -49,6 +49,7 @@
     {
       "group": "Essentials",
       "pages": [
+        "essentials/how-to-add-a-car",
         "essentials/markdown",
         "essentials/code",
         "essentials/images",
