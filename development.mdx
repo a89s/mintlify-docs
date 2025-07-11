@@ -1,65 +1,76 @@
 ---
-title: 'Development'
-description: 'Preview changes locally to update your docs'
+title: "Getting ready"
+description: "Preview changes locally to update your docs"
 ---
 
 <Info>
-  **Prerequisite**: Please install Node.js (version 19 or higher) before proceeding.
+  **Prerequisite**: Please install PHP 8.3 (or higher), Composer, MySql before proceeding.
 </Info>
 
-Follow these steps to install and run Mintlify on your operating system:
+Follow these steps to install and run RZ Autoparks on your system:
 
-**Step 1**: Install Mintlify:
+**Step 1**: Clone the repository:
 
-<CodeGroup>
-
-  ```bash npm
-  npm i -g mintlify
-  ```
-
-```bash yarn
-yarn global add mintlify
+```php
+git clone https://github.com/a89s/RZ-Autoparks.git
 ```
 
-</CodeGroup>
+**Step 2**: Run:
 
-**Step 2**: Navigate to the docs directory (where the `mint.json` file is located) and execute the following command:
-
-```bash
-mintlify dev
+```php
+composer install
 ```
 
-A local preview of your documentation will be available at `http://localhost:3000`.
+**Step 3**: Run:
+
+```php
+npm install
+```
+
+**Step 4**: Run:
+
+```php
+cp .env.example .env
+```
+
+**Step 5**: Update the DB settings:
+
+```php
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=db_name
+DB_USERNAME=db_username
+DB_PASSWORD=db_password
+```
+
+**Step 6**: Run the app's backend:
+
+```php
+php artisan serve
+```
+
+**Step 7**: Run the app's frontend:
+
+```php
+npm run dev
+```
 
 ### Custom Ports
 
-By default, Mintlify uses port 3000. You can customize the port Mintlify runs on by using the `--port` flag. To run Mintlify on port 3333, for instance, use this command:
+By default, app uses port 3000. You can customize the port app runs on by using the `--port` flag. To run app on port 8090, for instance, use this command:
 
-```bash
-mintlify dev --port 3333
+```php
+php artisan serve --port 8090
 ```
 
-If you attempt to run Mintlify on a port that's already in use, it will use the next available port:
+If you attempt to run app on a port that's already in use, it will use the next available port:
 
 ```md
 Port 3000 is already in use. Trying 3001 instead.
 ```
 
-## Mintlify Versions
-
-Please note that each CLI release is associated with a specific version of Mintlify. If your local website doesn't align with the production version, please update the CLI:
-
-<CodeGroup>
-
-```bash npm
-npm i -g mintlify@latest
-```
-
-```bash yarn
-yarn global upgrade mintlify
-```
-
-</CodeGroup>
+## 
 
 ## Validating Links
 
@@ -79,7 +90,10 @@ mintlify broken-links
 If the deployment is successful, you should see the following:
 
 <Frame>
-  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
+  <img
+    src="/images/checks-passed.png"
+    style={{ borderRadius:"0.5rem" }}
+  />
 </Frame>
 
 ## Code Formatting
@@ -90,16 +104,14 @@ We suggest using extensions on your IDE to recognize and format MDX. If you're a
 
 <AccordionGroup>
   <Accordion title='Error: Could not load the "sharp" module using the darwin-arm64 runtime'>
-
     This may be due to an outdated version of node. Try the following:
+
     1. Remove the currently-installed version of mintlify: `npm remove -g mintlify`
     2. Upgrade to Node v19 or higher.
     3. Reinstall mintlify: `npm install -g mintlify`
   </Accordion>
-
   <Accordion title="Issue: Encountering an unknown error">
-  
-    Solution: Go to the root of your device and delete the \~/.mintlify folder. Afterwards, run `mintlify dev` again.
+    Solution: Go to the root of your device and delete the ~/.mintlify folder. Afterwards, run `mintlify dev` again.
   </Accordion>
 </AccordionGroup>
 
