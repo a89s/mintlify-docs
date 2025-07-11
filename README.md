@@ -9,3 +9,7 @@ Here you will find the steps needed to get the app up and running on your system
 ### Docker
 
 In the beginning when the app was developed, we didn't use docker. So as the time progresses, we are going to put the app in a docker container, it just hasn't been done yet. Patience\! :)
+
+<Card title="Set Up" icon="link" href="development" cta="Click here">
+  Click this card to continue to the app's setup
+</Card>
