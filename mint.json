@@ -47,12 +47,11 @@
       ]
     },
     {
-      "group": "Essentials",
+      "group": "How To",
       "pages": [
         "essentials/how-to-add-a-car",
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
+        "essentials/image-uploads",
+        "essentials/edit-features",
         "essentials/settings",
         "essentials/navigation",
         "essentials/reusable-snippets"
