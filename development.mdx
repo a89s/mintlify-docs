@@ -1,13 +1,13 @@
 ---
 title: "Getting ready"
-description: "Preview changes locally to update your docs"
+description: "How to get the app up and running localy."
 ---
 
 <Info>
   **Prerequisite**: Please install PHP 8.3 (or higher), Composer, MySql before proceeding.
 </Info>
 
-Follow these steps to install and run RZ Autoparks on your system:
+Follow these steps to install and run RZ Autoparks app on your system:
 
 **Step 1**: Clone the repository:
 
@@ -70,49 +70,36 @@ If you attempt to run app on a port that's already in use, it will use the next 
 Port 3000 is already in use. Trying 3001 instead.
 ```
 
-## 
-
-## Validating Links
-
-The CLI can assist with validating reference links made in your documentation. To identify any broken links, use the following command:
-
-```bash
-mintlify broken-links
-```
-
 ## Deployment
 
 <Tip>
-  Unlimited editors available under the [Pro
-  Plan](https://mintlify.com/pricing) and above.
+  There is a branch named **DEV** that is used for development purposes. Ideally for each feature you build, you would make a new branch so that it's easier to follow changes and fix stuff if something is broken.\
+  \
+  P.S. - We use [Code Rabbit ](https://www.coderabbit.ai/)for PR's. Makes our lives a bit easier. It explains the PR with sequence diagrams and other stuff.
 </Tip>
 
 If the deployment is successful, you should see the following:
 
 <Frame>
   <img
-    src="/images/checks-passed.png"
+    src="/coderabbit.webp"
     style={{ borderRadius:"0.5rem" }}
+    alt=""
+    title=""
   />
 </Frame>
 
 ## Code Formatting
 
-We suggest using extensions on your IDE to recognize and format MDX. If you're a VSCode user, consider the [MDX VSCode extension](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) for syntax highlighting, and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) for code formatting.
+We use Laravel Pint for code formatting. It is integrated in our CI/CD checks. There will be a new section explaining this.
 
 ## Troubleshooting
 
 <AccordionGroup>
-  <Accordion title='Error: Could not load the "sharp" module using the darwin-arm64 runtime'>
-    This may be due to an outdated version of node. Try the following:
-
-    1. Remove the currently-installed version of mintlify: `npm remove -g mintlify`
-    2. Upgrade to Node v19 or higher.
-    3. Reinstall mintlify: `npm install -g mintlify`
+  <Accordion title="Something" icon="gear" iconType="regular">
+    I'll do this later
   </Accordion>
-  <Accordion title="Issue: Encountering an unknown error">
-    Solution: Go to the root of your device and delete the ~/.mintlify folder. Afterwards, run `mintlify dev` again.
+  <Accordion title="Easy fix" icon="stars" iconType="regular">
+    I'll do this later
   </Accordion>
 </AccordionGroup>
-
-Curious about what changed in the CLI version? [Check out the CLI changelog.](https://www.npmjs.com/package/mintlify?activeTab=versions)
